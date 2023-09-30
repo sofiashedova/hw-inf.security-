@@ -1,3 +1,5 @@
-from itertools import *
-x = [ str(a) for a in input().split()]
-print(max(list(permutations(x, r = len(x)))))
+numbers = input("Введите список чисел через запятую").split(",")
+numbers = [int(num) for num in numbers]
+numbers.sort(reverse = True, key = lambda x: str(x))
+result = " ".join(str(num) for num in numbers)
+print("Максимально возможное число:", result)
